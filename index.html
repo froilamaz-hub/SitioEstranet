@@ -6,13 +6,12 @@
     <meta name="description" content="Proveedor WISP de internet por aire, provincia de La Rioja" />
     <meta charset="utf-8" />
     <meta name="robots" content="index,follow" />
-    <link rel="icon" href="/Img/icono-estranet.ico" />
+    <link rel="icon" href="./Img/icono-estranet.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -162,7 +161,13 @@
         <div class="precio">$60.390</div>
         <div class="descuento"><strong>10% OFF</strong> pagando antes del vencimiento</div>
         <div class="aclaracion-instalacion">No incluye costo de instalación</div>
-        <div class="button-contratar"><button onclick="location.href='https://api.whatsapp.com/send/?phone=5493804660163&text=Quiero+el+servicio+residencial&type=phone_number&app_absent=0'">¡Lo Quiero!</button></div>
+        <div class="button-contratar">
+    <a href="https://wa.me/5493804660163?text=Quiero%20el%20servicio%20residencial" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        ¡Lo Quiero!
+    </a>
+</div>
     </div>
      <div class="tarjeta-servicios">
         <div class="servicios-header">
@@ -175,7 +180,13 @@
         <div class="precio">$30.500</div>
         <div class="descuento"><strong>20% OFF</strong> pagando antes del vencimiento</div>
         <div class="aclaracion-instalacion">No incluye costo de instalación</div>
-        <div class="button-contratar"><button onclick="location.href='https://api.whatsapp.com/send/?phone=5493804660163&text=Soy+una+empresa+consultando+por+el+servicio+corporativo&type=phone_number&app_absent=0'">¡Lo Quiero!</button></div>
+        <div class="button-contratar">
+    <a href="https://api.whatsapp.com/send/?phone=5493804660163&text=Soy+una+empresa+consultando+por+el+servicio+corporativo&type=phone_number&app_absent=0" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        ¡Lo Quiero!
+    </a>
+</div>
     </div>
      <div class="tarjeta-servicios">
         <div class="servicios-header">
@@ -188,7 +199,13 @@
         <div class="precio">Conocélos</div>
         <div class="descuento"><strong>Cuotas sin Interés</strong> y descuentos en efectivo</div>
         <div class="aclaracion-instalacion">tv box, routers, periféricos y más</div>
-        <div class="button-contratar"><button onclick="location.href='https://api.whatsapp.com/send/?phone=5493804660163&text=Quiero+saber+que+accesorios+venden&type=phone_number&app_absent=0'">¡Lo Quiero!</button></div>
+        <div class="button-contratar">
+    <a href="https://api.whatsapp.com/send/?phone=5493804660163&text=Quiero+saber+que+accesorios+venden&type=phone_number&app_absent=0" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        ¡Lo Quiero!
+    </a>
+</div>
     </div>
 </div>
 </div>
@@ -238,124 +255,132 @@
 
         <!-- Sección Contacto -->
         <section id="contacto">
-            <hr class="separador">
-            <h4>CONTACTÁNOS Y HACÉ TU CONSULTA</h4>
-            <h2><span class="resaltado-tt-bolditalic">Completá el formulario</span><span class="light-tt"> de
-                    contacto</span></h2>
+    <hr class="separador">
+    <h4>CONTACTÁNOS Y HACÉ TU CONSULTA</h4>
+    <h2><span class="resaltado-tt-bolditalic">Completá el formulario</span><span class="light-tt"> de
+            contacto</span></h2>
 
-            <div class="formulario-contacto">
-                <form action="/procesar-contacto" method="POST">
-                    <!-- Datos Básicos -->
-                    <div class="seccion-formulario">
-                        <h4>Datos del Cliente</h4>
-                        <div class="campos-grid">
-                            <div class="grupo-formulario">
-                                <label for="nombre">Nombre(s):</label>
-                                <input type="text" id="nombre" name="Nombre" required />
-                            </div>
+    <div class="formulario-contacto">
+        <!-- ✅ CAMBIA SOLO ESTA LÍNEA -->
+        <form action="https://formsubmit.co/carlosfroilanmaza@gmail.com" method="POST">
+            
+            <!-- ✅ AGREGA ESTAS CONFIGURACIONES -->
+            <input type="hidden" name="_subject" value="Nueva consulta desde Estranet Web">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+            <!-- Si no tenés página de gracias, borrá la línea de arriba -->
 
-                            <div class="grupo-formulario">
-                                <label for="apellidos">Apellido(s):</label>
-                                <input type="text" id="apellidos" name="Apellido" required />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="edad">Edad:</label>
-                                <small class="subtitulito">(Sólo números)</small>
-                                <input type="number" id="edad" name="Edad" min="18" max="100" />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="documento">DNI:</label>
-                                <small class="subtitulito   ">(Sólo números)</small>
-                                <input type="number" id="documento" name="documento" maxlength="8"
-                                    placeholder="99999999" />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="email">Correo Electrónico:</label>
-                                <input type="email" id="email" name="Mail" placeholder="pepesoria@hotmail.com"
-                                    required />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="telefono">Teléfono Principal:</label>
-                                <input type="tel" id="telefono" name="Teléfono" placeholder="Ej: 380-4234426"
-                                    required />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="telefono-secundario">Teléfono Secundario:</label>
-                                <input type="tel" id="telefono-secundario" name="Teléfono-secundario"
-                                    placeholder="Ej: 380-4234426" />
-                            </div>
-                        </div>
+            <!-- Datos Básicos -->
+            <div class="seccion-formulario">
+                <h4>Datos del Cliente</h4>
+                <div class="campos-grid">
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre(s):</label>
+                        <input type="text" id="nombre" name="Nombre" required />
                     </div>
 
-                    <!-- Dirección de Instalación -->
-                    <div class="seccion-formulario">
-                        <h4>Datos de Instalación</h4>
-                        <div class="campos-grid">
-                            <div class="grupo-formulario">
-                                <label for="direccion">Dirección:</label>
-                                <input type="text" id="direccion" name="direccion" required />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="barrio">Barrio:</label>
-                                <input type="text" id="barrio" name="barrio" required />
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="ciudad">Elegí tu Ciudad:</label>
-                                <select name="ciudad" id="ciudad" required>
-                                    <option value="">Selecciona una ciudad</option>
-                                    <option value="larioja">La Rioja</option>
-                                    <option value="aimogasta">Aimogasta</option>
-                                </select>
-                            </div>
-
-                            <div class="grupo-formulario grupo-textarea">
-                                <label for="comentario">Referencia del domicilio:</label>
-                                <textarea id="comentario" name="comentario"
-                                    placeholder="Ej: Algún comercio de referencia, sino características de la casa: rejas negras / portón rojo / frente de color gris"
-                                    rows="4">
-                        </textarea>
-                            </div>
-                        </div>
+                    <div class="grupo-formulario">
+                        <label for="apellidos">Apellido(s):</label>
+                        <input type="text" id="apellidos" name="Apellido" required />
                     </div>
 
-                    <!-- Motivo de consulta -->
-                    <div class="seccion-formulario">
-                        <h4>Motivo de consulta:</h4>
-                        <div class="radio-grid">
-                            <div class="radio-option">
-                                <input type="radio" name="motivo" id="instalacion" value="instalacion" required>
-                                <label for="instalacion">Instalación</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" name="motivo" id="soportetecnico" value="soporte" required>
-                                <label for="soportetecnico">Soporte Técnico</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" name="motivo" id="insumos" value="insumos" required>
-                                <label for="insumos">Compra de Insumos</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" name="motivo" id="mudanza" value="mudanza" required>
-                                <label for="mudanza">Mudanza del Servicio</label>
-                            </div>
-                        </div>
+                    <div class="grupo-formulario">
+                        <label for="edad">Edad:</label>
+                        <small class="subtitulito">(Sólo números)</small>
+                        <input type="number" id="edad" name="Edad" min="18" max="100" />
                     </div>
 
-                    <!-- Botones -->
-                    <div class="form-actions">
-                        <input type="submit" value="Enviar Datos">
-                        <input type="reset" value="Limpiar Formulario">
+                    <div class="grupo-formulario">
+                        <label for="documento">DNI:</label>
+                        <small class="subtitulito">(Sólo números)</small>
+                        <input type="text" id="documento" name="DNI" maxlength="8"
+                            placeholder="99999999" pattern="[0-9]{7,8}" />
                     </div>
-                </form>
+
+                    <div class="grupo-formulario">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="Email" placeholder="pepesoria@hotmail.com"
+                            required />
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="telefono">Teléfono Principal:</label>
+                        <input type="tel" id="telefono" name="Teléfono_Principal" placeholder="Ej: 380-4234426"
+                            required />
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="telefono-secundario">Teléfono Secundario:</label>
+                        <input type="tel" id="telefono-secundario" name="Teléfono_Secundario"
+                            placeholder="Ej: 380-4234426" />
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <!-- Dirección de Instalación -->
+            <div class="seccion-formulario">
+                <h4>Datos de Instalación</h4>
+                <div class="campos-grid">
+                    <div class="grupo-formulario">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="Dirección" required />
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="barrio">Barrio:</label>
+                        <input type="text" id="barrio" name="Barrio" required />
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="ciudad">Elegí tu Ciudad:</label>
+                        <select name="Ciudad" id="ciudad" required>
+                            <option value="">Selecciona una ciudad</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Aimogasta">Aimogasta</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-formulario grupo-textarea">
+                        <label for="comentario">Referencia del domicilio:</label>
+                        <textarea id="comentario" name="Referencia_Domicilio"
+                            placeholder="Ej: Algún comercio de referencia, sino características de la casa: rejas negras / portón rojo / frente de color gris"
+                            rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motivo de consulta -->
+            <div class="seccion-formulario">
+                <h4>Motivo de consulta:</h4>
+                <div class="radio-grid">
+                    <div class="radio-option">
+                        <input type="radio" name="Motivo_Consulta" id="instalacion" value="Instalación" required>
+                        <label for="instalacion">Instalación</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="Motivo_Consulta" id="soportetecnico" value="Soporte Técnico" required>
+                        <label for="soportetecnico">Soporte Técnico</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="Motivo_Consulta" id="insumos" value="Compra de Insumos" required>
+                        <label for="insumos">Compra de Insumos</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="Motivo_Consulta" id="mudanza" value="Mudanza del Servicio" required>
+                        <label for="mudanza">Mudanza del Servicio</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="form-actions">
+                <input type="submit" value="Enviar Datos">
+                <input type="reset" value="Limpiar Formulario">
+            </div>
+        </form>
+    </div>
+</section>
 
         <!-- Sección Ubicación -->
         <section id="ubicacion">
@@ -370,67 +395,41 @@
                 </div>
                         <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.526119295015!2d-66.85499508822319!3d-29.413415802200184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9427da359a9bcd89%3A0xb91f1d4f424029ea!2sESTRANET!5e0!3m2!1ses-419!2sar!4v1748300698455!5m2!1ses-419!2sar"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación de Estranet en Google Maps"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="contenedor-ppal-contactos">
                     <div class="info-contacto"> <!-- Agrupación de todos -->
-                        <div class="row-contacto"> <!-- Item contacto es cada fila -->
-                            <div class="icono-contacto">
-                                <img src="./Img/phone-alt.png" alt="Icono de teléfono">
-                            </div>
-                            <div class="texto-contacto">
-                                
-                                <span class="subtt-contacto">420082</span>
-                            </div>
-                        </div>
+<a href="tel:+543804420082" class="row-contacto">
+    <img src="./Img/phone-alt.png" alt="Teléfono" class="icono-contacto">
+    <span class="subtt-contacto">420082</span>
+</a>
 
-                        <div class="row-contacto">
-                            <a href="mailto:carlosfroilanmaza@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <div class="icono-contacto">
-                                    <img src="./Img/mail-alt.png" alt="Icono de email">
-                                </div>
-                                <div class="texto-contacto">
-                                    
-                                    <span class="subtt-contacto">contacto@estranet.com</span>
-                    </a>
-                    </div>
-                </div>
+<a href="mailto:contacto@estranet.com" class="row-contacto">
+    <img src="./Img/mail-alt.png" alt="Email" class="icono-contacto">
+    <span class="subtt-contacto">contacto@estranet.com</span>
+</a>
 
-                    <div class="row-contacto">
-                        <a href="https://wa.me/5493804660163?text=Estoy%20interesado%20en%20el%20servicio"
-                            target="_blank" rel="noopener noreferrer">
-                            <div class="icono-contacto">
-                                <img src="./Img/whatsapp-alt.png" alt="Icono de whatsapp">
-                            </div>
-                            <div class="texto-contacto">
-                                
-                                <span class="subtt-contacto">03804 66-0163</span>
-                    </a>
-                    </div>
-                </div>
+<a href="https://wa.me/5493804660163?text=Estoy%20interesado%20en%20el%20servicio"
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="row-contacto">
+    <img src="./Img/whatsapp-alt.png" alt="WhatsApp" class="icono-contacto">
+    <span class="subtt-contacto">03804 66-0163</span>
+</a>
 
-                <div class="row-contacto">
-                    <div class="icono-contacto">
-                        <img src="./Img/ubicacion-alt.png" alt="Icono de ubicación">
-                    </div>
-                    <div class="texto-contacto">
-                        
-                        <span class="subtt-contacto">Benjamin de la Vega 33</span>
-                    </div>
-                </div>
+<div class="row-contacto">
+    <img src="./Img/ubicacion-alt.png" alt="Ubicación" class="icono-contacto">
+    <span class="subtt-contacto">Benjamin de la Vega 33</span>
+</div>
 
-                <div class="row-contacto">
-                    <div class="icono-contacto">
-                        <img src="./Img/calendar-alt.png" alt="Icono de calendario">
-                    </div>
-                    <div class="texto-contacto">
-                        
-                        <span class="subtt-contacto"><p>Lun a Vie de 9 a 13 hs </p><p>Y de 18 a 22 hs</p><br><p>Sáb de 9 a 13 hs</p></span>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
+<div class="row-contacto">
+    <img src="./Img/calendar-alt.png" alt="Horario" class="icono-contacto">
+    <span class="subtt-contacto">
+        <p>Lun a Vie de 9 a 13 hs</p>
+        <p>Y de 18 a 22 hs</p>
+        <p>Sáb de 9 a 13 hs</p>
+    </span>
+</div>
         </section>
     </main>
 
@@ -455,5 +454,6 @@
 
 <!-- CARGA DE SCRIPT JS -->
 <script src="./script.js"></script>
-<script defer="True" src="app.js"></script></body>
+
+</body>
 </html>
